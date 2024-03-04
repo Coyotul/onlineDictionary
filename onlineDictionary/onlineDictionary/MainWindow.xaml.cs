@@ -33,12 +33,14 @@ namespace onlineDictionary
 
         private void OnSearch(object sender, RoutedEventArgs e)
         {
-
+            SearchWindow searchWindow = new SearchWindow();
+            searchWindow.Show();
         }
 
         private void OnClickEntertainment(object sender, RoutedEventArgs e)
         {
-
+            EntertainmentWindow entertainmentWindow = new EntertainmentWindow();
+            entertainmentWindow.Show();
         }
     }
 }
