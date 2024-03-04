@@ -18,27 +18,11 @@ namespace onlineDictionary
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AdministratorWindow : Window
     {
-        public MainWindow()
+        public AdministratorWindow()
         {
             InitializeComponent();
-        }
-
-        private void OnClickAdmin(object sender, RoutedEventArgs e)
-        {
-            AdministratorWindow administratorWindow = new AdministratorWindow();
-            administratorWindow.Show();
-        }
-
-        private void OnSearch(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void OnClickEntertainment(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:onlineDictionary"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}">
+        <TextBlock TextAlignment="Center" VerticalAlignment="Top" FontSize="28"  Height="97" Margin="264,37,268,0" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" FontFamily="Elephant"><Run Text="DEXter"/><LineBreak/><Run Text="Online Dictionary" Background="AliceBlue"/></TextBlock>
+        <Button x:Name="adminButton" Content="Administrator" Click="OnClickAdmin" ClickMode="Release" Width="167" HorizontalAlignment="Left" Margin="43,165,0,156" FontSize="20" Background="#FFB15D5D" FontFamily="Tahoma" FontWeight="Bold"/>
+        <Button x:Name="divertismentButton" Content="Entertainment" Click="OnClickEntertainment" ClickMode="Release"  Width="152" HorizontalAlignment="Left" Margin="600,162,0,161" FontSize="20" Background="#FFB15D5D" FontFamily="Tahoma" FontWeight="Bold"/>
+        <Button x:Name="searchButton" Content="Search" Click="OnSearch" ClickMode="Release" Width="177" HorizontalAlignment="Center" Margin="0,167,0,158" FontSize="20" Background="#FFB15D5D" FontFamily="Tahoma" FontWeight="Bold"/>
     </Grid>
 </Window>
