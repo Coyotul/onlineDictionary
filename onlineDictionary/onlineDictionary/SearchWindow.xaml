@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:onlineDictionary"
         mc:Ignorable="d"
         Title="SearchWindow" Height="450" Width="800">
-    <Grid Background="#FF0022FF">
+    <Grid Background="#FFA1AAE5">
         
     </Grid>
 </Window>

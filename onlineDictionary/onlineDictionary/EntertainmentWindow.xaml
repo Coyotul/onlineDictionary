@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:onlineDictionary"
         mc:Ignorable="d"
         Title="EntertainmentWindowxaml" Height="450" Width="800">
-    <Grid Background="#FFFA0000">
+    <Grid Background="#FFC99292">
         
     </Grid>
 </Window>
