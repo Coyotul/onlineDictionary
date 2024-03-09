@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:onlineDictionary"
         mc:Ignorable="d"
-        Title="AddWord" Height="150" Width="300">
+        Title="AddWord" Height="169" Width="337">
     <Grid>
         <TextBlock x:Name="wordText" Text="Word:"  FontSize="20" Margin="0,7,197,100"/>
         <TextBlock x:Name="descriptionText" Text="Description:"  FontSize="20" Margin="-3,42,200,62"/>
-        <TextBox x:Name="word" Text=""  KeyDown="wordTextButton" Margin="131,13,6,96" TextChanged="word_TextChanged"/>
-        <TextBox x:Name="description" Text=""  KeyDown="descriptionButton" Margin="132,45,0,66" TextChanged="description_TextChanged"/>
+        <TextBox x:Name="word" Text=""  Margin="131,13,1,96" TextChanged="word_TextChanged"/>
+        <TextBox x:Name="description" Text="" Margin="132,45,0,66" TextChanged="description_TextChanged"/>
         <TextBlock x:Name="imageSourceText" Text="ImageSource:"  FontSize="20" Margin="1,73,177,31"/>
-        <TextBox x:Name="imageSource" Text=""  KeyDown="imageSourceButton" Margin="132,77,0,34" TextChanged="imageSource_TextChanged"/>
+        <TextBox x:Name="imageSource" Text="" Margin="132,77,0,34" TextChanged="imageSource_TextChanged"/>
         <Button x:Name="addWord" Content="Add Word" Click="addWordButton" ClickMode="Release" Width="300" HorizontalAlignment="Center" FontSize="20" FontFamily="Tahoma" FontWeight="Bold" Margin="0,105,0,0">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

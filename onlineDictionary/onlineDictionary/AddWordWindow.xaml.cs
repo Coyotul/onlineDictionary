@@ -24,11 +24,6 @@ namespace onlineDictionary
             InitializeComponent();
         }
 
-        private void word_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void imageSource_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -40,6 +35,11 @@ namespace onlineDictionary
         }
 
         private void addWordButton(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void word_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

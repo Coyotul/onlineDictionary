@@ -65,7 +65,8 @@ namespace onlineDictionary
 
         private void addWordButton(object sender, RoutedEventArgs e)
         {
-
+            AddWordWindow addWordWindow = new AddWordWindow();
+            addWordWindow.Show();
         }
 
         private void deleteWordButton(object sender, RoutedEventArgs e)
