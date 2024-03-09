@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace onlineDictionary
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class AdministratorWindow : Window
     {
         Administrator admin = new Administrator();
@@ -31,6 +28,8 @@ namespace onlineDictionary
             passwordText.Visibility = Visibility.Visible;
             password.Visibility = Visibility.Visible;
             incorectCredentials.Visibility = Visibility.Collapsed;
+            addWord.Visibility = Visibility.Collapsed;
+            deleteWord.Visibility = Visibility.Collapsed;
         }
 
         private void username_KeyDown(object sender, KeyEventArgs e)
@@ -49,13 +48,29 @@ namespace onlineDictionary
                 String passText = password.Text;
                 if (admin.SearchUser(userText, passText))
                 {
-                    MessageBox.Show("Utilizatorul exista");
+                    incorectCredentials.Visibility = Visibility.Collapsed;
+                    usernameText.Visibility = Visibility.Collapsed;
+                    username.Visibility = Visibility.Collapsed;
+                    passwordText.Visibility = Visibility.Collapsed;
+                    password.Visibility = Visibility.Collapsed;
+                    addWord.Visibility = Visibility.Visible;
+                    deleteWord.Visibility = Visibility.Visible;
                 }
                 else
                 {
                     incorectCredentials.Visibility = Visibility.Visible;
                 }
             }
+        }
+
+        private void addWordButton(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void deleteWordButton(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

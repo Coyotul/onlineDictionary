@@ -22,6 +22,8 @@
         <TextBlock x:Name="passwordText" Text="Password"  Height="50" Margin="169,196,455,188" FontSize="20"/>
         <TextBox x:Name="password" Text="" Margin="300,201,328,189" KeyDown="password_KeyDown"/>
         <TextBlock x:Name="incorectCredentials" Text="Username and password are incorect"  Height="50" Margin="214,262,246,122" FontSize="20" Foreground="#FFF71818"/>
-
+        <Button x:Name="addWord" Content="Add Word" Click="addWordButton" ClickMode="Release" Width="109" HorizontalAlignment="Left" Margin="24,373,0,17" FontSize="20" Background="AliceBlue" FontFamily="Tahoma" FontWeight="Bold"/>
+        <Button x:Name="deleteWord" Content="Delete Word" Click="deleteWordButton" ClickMode="Release" Width="146" HorizontalAlignment="Left" Margin="171,373,0,17" FontSize="20" Background="AliceBlue" FontFamily="Tahoma" FontWeight="Bold"/>
+        
     </Grid>
 </Window>
