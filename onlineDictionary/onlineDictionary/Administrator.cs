@@ -34,7 +34,7 @@ namespace onlineDictionary
             }
             catch (JsonException ex)
             {
-                Console.WriteLine("Eroare la parsarea JSON-ului: " + ex.Message);
+                Console.WriteLine("Eroare la citirea JSON-ului: " + ex.Message);
             }
         }
 

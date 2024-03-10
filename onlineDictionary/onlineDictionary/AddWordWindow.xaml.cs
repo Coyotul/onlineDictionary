@@ -36,7 +36,25 @@ namespace onlineDictionary
 
         private void addWordButton(object sender, RoutedEventArgs e)
         {
-
+            if(word.Text.Length!=0 && description.Text.Length!=0)
+            {
+                if(imageSource.Text.Length!=0)
+                {
+                    Words _words = new Words();
+                    _words.GetWords();
+                    _words.AddWord(word.Text, description.Text, imageSource.Text);
+                    _words.SetWords();
+                    Close();
+                }
+                else
+                {
+                    Words _words = new Words();
+                    _words.GetWords();
+                    _words.AddWord(word.Text, description.Text);
+                    _words.SetWords();
+                    Close();
+                }
+            }
         }
 
         private void word_TextChanged(object sender, TextChangedEventArgs e)

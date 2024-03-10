@@ -35,7 +35,20 @@ namespace onlineDictionary
             }
             catch (JsonException ex)
             {
-                Console.WriteLine("Eroare la parsarea JSON-ului: " + ex.Message);
+                Console.WriteLine("Eroare la citirea JSON-ului: " + ex.Message);
+            }
+        }
+
+        public void SetWords()
+        {
+            try
+            {
+                string jsonText = JsonSerializer.Serialize(_words);
+                File.WriteAllText("words.json", jsonText);
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine("Eroare la scrierea JSON-ului: " + ex.Message);
             }
         }
 
@@ -45,6 +58,7 @@ namespace onlineDictionary
             w.Word = word;
             w.Description = description;
             w.ImageSource = "no_image.png";
+            _words.Add(w);
         }
 
         public void AddWord(string word, string description, string imageSource)
@@ -53,6 +67,7 @@ namespace onlineDictionary
             w.Word = word;
             w.Description = description;
             w.ImageSource = imageSource;
+            _words.Add(w);
         }
 
     }
