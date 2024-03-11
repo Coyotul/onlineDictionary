@@ -12,7 +12,8 @@
         <TextBox x:Name="word" Text=""  Margin="131,13,1,96" TextChanged="word_TextChanged"/>
         <TextBox x:Name="description" Text="" Margin="132,45,0,66" TextChanged="description_TextChanged"/>
         <TextBlock x:Name="imageSourceText" Text="ImageSource:"  FontSize="20" Margin="1,73,177,31"/>
-        <TextBox x:Name="imageSource" Text="" Margin="132,77,0,34" TextChanged="imageSource_TextChanged"/>
+        <Button x:Name="choseImage" Content="Choose Image" Click="chooseImage" ClickMode="Release" Width="156" HorizontalAlignment="Left" FontSize="10" FontFamily="Tahoma" FontWeight="Bold" Margin="131,79,0,40"/>
+
         <Button x:Name="addWord" Content="Add Word" Click="addWordButton" ClickMode="Release" Width="300" HorizontalAlignment="Center" FontSize="20" FontFamily="Tahoma" FontWeight="Bold" Margin="0,105,0,0">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

@@ -39,6 +39,11 @@ namespace onlineDictionary
             }
         }
 
+        public List<wordStruct> ReturnWords()
+        {
+            return _words;
+        }
+
         public void SetWords()
         {
             try

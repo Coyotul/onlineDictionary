@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace onlineDictionary
     /// </summary>
     public partial class AddWordWindow : Window
     {
+        String _imageSource = "no_image.png";
         public AddWordWindow()
         {
             InitializeComponent();
@@ -36,24 +38,14 @@ namespace onlineDictionary
 
         private void addWordButton(object sender, RoutedEventArgs e)
         {
-            if(word.Text.Length!=0 && description.Text.Length!=0)
+            if (word.Text.Length != 0 && description.Text.Length != 0)
             {
-                if(imageSource.Text.Length!=0)
-                {
-                    Words _words = new Words();
-                    _words.GetWords();
-                    _words.AddWord(word.Text, description.Text, imageSource.Text);
-                    _words.SetWords();
-                    Close();
-                }
-                else
-                {
-                    Words _words = new Words();
-                    _words.GetWords();
-                    _words.AddWord(word.Text, description.Text);
-                    _words.SetWords();
-                    Close();
-                }
+
+                Words _words = new Words();
+                _words.GetWords();
+                _words.AddWord(word.Text, description.Text, _imageSource);
+                _words.SetWords();
+                Close();
             }
         }
 
@@ -61,5 +53,18 @@ namespace onlineDictionary
         {
 
         }
+
+        private void chooseImage(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = "Fișiere de imagine (*.jpg, *.jpeg, *.png, *.bmp)|*.jpg;*.jpeg;*.png;*.bmp|Toate fișierele (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                _imageSource = openFileDialog.FileName;
+            }
+        }
+
     }
 }

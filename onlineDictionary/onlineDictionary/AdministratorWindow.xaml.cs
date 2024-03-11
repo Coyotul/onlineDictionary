@@ -17,12 +17,13 @@ namespace onlineDictionary
 {
     public partial class AdministratorWindow : Window
     {
-        Administrator admin = new Administrator();
+        Administrator _admin = new Administrator();
+        Words _words = new Words();
 
         public AdministratorWindow()
         {
             InitializeComponent();
-            admin.ReadCredentials();
+            _admin.ReadCredentials();
             usernameText.Visibility = Visibility.Visible;
             username.Visibility = Visibility.Visible;
             passwordText.Visibility = Visibility.Visible;
@@ -30,6 +31,8 @@ namespace onlineDictionary
             incorectCredentials.Visibility = Visibility.Collapsed;
             addWord.Visibility = Visibility.Collapsed;
             deleteWord.Visibility = Visibility.Collapsed;
+            scrollViewer.Visibility = Visibility.Collapsed;
+            updateList.Visibility = Visibility.Collapsed;
         }
 
         private void username_KeyDown(object sender, KeyEventArgs e)
@@ -46,7 +49,7 @@ namespace onlineDictionary
             {
                 String userText = username.Text;
                 String passText = password.Text;
-                if (admin.SearchUser(userText, passText))
+                if (_admin.SearchUser(userText, passText))
                 {
                     incorectCredentials.Visibility = Visibility.Collapsed;
                     usernameText.Visibility = Visibility.Collapsed;
@@ -55,6 +58,9 @@ namespace onlineDictionary
                     password.Visibility = Visibility.Collapsed;
                     addWord.Visibility = Visibility.Visible;
                     deleteWord.Visibility = Visibility.Visible;
+                    scrollViewer.Visibility = Visibility.Visible;
+                    updateList.Visibility = Visibility.Visible;
+                    wordListBox.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -67,11 +73,45 @@ namespace onlineDictionary
         {
             AddWordWindow addWordWindow = new AddWordWindow();
             addWordWindow.Show();
+
         }
 
         private void deleteWordButton(object sender, RoutedEventArgs e)
         {
+            UpdateList();
+        }
 
+        private Words Get_words()
+        {
+            return _words;
+        }
+
+        public void UpdateList()
+        {
+            //wordListBox.Items.Clear();
+            _words.GetWords();
+            foreach (var word in _words.ReturnWords())
+            {
+                ListBoxItem newItem = new ListBoxItem();
+                newItem.Content = word.Word;
+                newItem.MouseDoubleClick += WordItem_MouseDoubleClick;
+                wordListBox.Items.Add(newItem);
+            }
+        }
+
+        private void WordItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            // Obține cuvântul selectat
+            var listBoxItem = (ListBoxItem)sender;
+            string selectedWord = (string)listBoxItem.Content;
+
+            // Aici poți executa acțiunea corespunzătoare când utilizatorul face dublu clic pe un element
+            MessageBox.Show("Ai făcut dublu clic pe cuvântul: " + selectedWord);
+        }
+
+        private void updateListButton(object sender, RoutedEventArgs e)
+        {
+            UpdateList();
         }
     }
 }

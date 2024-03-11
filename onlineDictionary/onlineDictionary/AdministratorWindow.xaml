@@ -24,6 +24,14 @@
         <TextBlock x:Name="incorectCredentials" Text="Username and password are incorect"  Height="50" Margin="214,262,246,122" FontSize="20" Foreground="#FFF71818"/>
         <Button x:Name="addWord" Content="Add Word" Click="addWordButton" ClickMode="Release" Width="109" HorizontalAlignment="Left" Margin="24,373,0,17" FontSize="20" Background="AliceBlue" FontFamily="Tahoma" FontWeight="Bold"/>
         <Button x:Name="deleteWord" Content="Delete Word" Click="deleteWordButton" ClickMode="Release" Width="146" HorizontalAlignment="Left" Margin="171,373,0,17" FontSize="20" Background="AliceBlue" FontFamily="Tahoma" FontWeight="Bold"/>
-        
+        <Button x:Name="updateList" Content ="UpdateList" Click="updateListButton" ClickMode="Release" Width="146" HorizontalAlignment="Left" Margin="344,372,0,18" FontSize="20" Background="AliceBlue" FontFamily="Tahoma" FontWeight="Bold"/>
+
+        <ScrollViewer Height="300" VerticalScrollBarVisibility="Auto" x:Name="scrollViewer">
+            <ListBox x:Name="wordListBox" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Width="777" Height="240" Background="#FF3C8C4D">
+                <ListBoxItem>Gol</ListBoxItem>
+
+            </ListBox>
+
+        </ScrollViewer>
     </Grid>
 </Window>
