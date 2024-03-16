@@ -79,5 +79,31 @@ namespace onlineDictionary
             _words.Add(w);
         }
 
+        public void DeleteWord(string wordName)
+        {
+            foreach (wordStruct word in _words)
+            {
+                if(word.Word.Equals(wordName))
+                { _words.Remove(word); return; }
+            }
+        }
+        public string GetWordImgSource(string wordName)
+        {
+            foreach (wordStruct word in _words)
+            {
+                if (word.Word.Equals(wordName))
+                { return word.ImageSource; }
+            }
+            return "C:\\Users\\George\\source\\repos\\onlineDictionary\\onlineDictionary\\onlineDictionary\\bin\\Debug\\no_image.png";
+        }
+        public wordStruct GetWord(string wordName)
+        {
+            foreach (wordStruct word in _words)
+            {
+                if (word.Word.Equals(wordName))
+                { return word; }
+            }
+            return new wordStruct();
+        }
     }
 }

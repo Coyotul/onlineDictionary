@@ -20,7 +20,7 @@ namespace onlineDictionary
     /// </summary>
     public partial class AddWordWindow : Window
     {
-        String _imageSource = "no_image.png";
+        String _imageSource = "C:\\Users\\George\\source\\repos\\onlineDictionary\\onlineDictionary\\onlineDictionary\\bin\\Debug\\no_image.png";
         public AddWordWindow()
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace onlineDictionary
 
                 Words _words = new Words();
                 _words.GetWords();
-                _words.AddWord(word.Text, description.Text, _imageSource, category.Text);
+                _words.AddWord(word.Text, description.Text, _imageSource,category.Text);
                 _words.SetWords();
                 Close();
             }

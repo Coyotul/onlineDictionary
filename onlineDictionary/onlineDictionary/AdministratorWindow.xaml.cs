@@ -103,8 +103,10 @@ namespace onlineDictionary
         {
             var listBoxItem = (ListBoxItem)sender;
             string selectedWord = (string)listBoxItem.Content;
-
-            MessageBox.Show("Ai făcut dublu clic pe cuvântul: " + selectedWord);
+            string description = _words.GetWord(selectedWord).Description;
+            string category = _words.GetWord(selectedWord).Category;
+            string imageSource = _words.GetWord(selectedWord).ImageSource;
+            new WordPage(selectedWord, description, imageSource, category, true).Show();
         }
 
         private void updateListButton(object sender, RoutedEventArgs e)

@@ -93,6 +93,9 @@
     <Compile Include="AddWordWindow.xaml.cs">
       <DependentUpon>AddWordWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WordPage.xaml.cs">
+      <DependentUpon>WordPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Words.cs" />
     <Page Include="AdministratorWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddWordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WordPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
