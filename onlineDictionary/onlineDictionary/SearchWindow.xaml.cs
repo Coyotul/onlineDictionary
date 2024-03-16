@@ -62,5 +62,21 @@ namespace onlineDictionary
         {
             category = categoryBox.Text;
         }
+
+        private void search_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter || e.Key == Key.Return)
+            {
+
+                string selectedWord = _words.GetWord(search.Text).Word;
+                string description = _words.GetWord(selectedWord).Description;
+                string category = _words.GetWord(selectedWord).Category;
+                string imageSource = _words.GetWord(selectedWord).ImageSource;
+                if (selectedWord != null)
+                {
+                    new WordPage(selectedWord, description, imageSource, category, false).Show();
+                }
+            }
+        }
     }
 }
