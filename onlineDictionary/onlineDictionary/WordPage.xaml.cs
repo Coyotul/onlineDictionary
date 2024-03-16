@@ -19,7 +19,7 @@ namespace onlineDictionary
     /// </summary>
     public partial class WordPage : Window
     {
-        Words _words = new Words();
+        private Words _words = new Words();
 
         public WordPage(string word,string description,string imageSrc,string category, bool canUseButtons)
         {
