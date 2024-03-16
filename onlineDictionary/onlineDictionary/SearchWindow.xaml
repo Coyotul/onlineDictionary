@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="SearchWindow" Height="450" Width="800">
     <Grid Background="#FFA1AAE5">
-        
+        <TextBlock TextAlignment="Center" VerticalAlignment="Top" FontSize="28"  Height="97" Margin="250,12,282,0" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" FontFamily="Elephant"><Run Text="DEXter"/><LineBreak/><Run Text="Online Dictionary" Background="AliceBlue"/></TextBlock>
+        <TextBlock x:Name="SearchText" Text="Search:" Margin="95,159,595,216" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="search" Text="" Margin="185,159,240,231" TextChanged="search_TextChanged"/>
+        <TextBlock x:Name="CategoryText" Text="Category:" Margin="85,108,615,230" FontSize="16" FontWeight="Bold" Height="96"/>
+
+        <ListBox x:Name="wordListBox" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="#053C8C4D" BorderBrush="#00ABADB3" Margin="187,179,240,110">
+        </ListBox>
+        <TextBox x:Name="categoryBox" Text="" Margin="185,109,240,281" TextChanged="category_TextChanged"/>
     </Grid>
 </Window>
