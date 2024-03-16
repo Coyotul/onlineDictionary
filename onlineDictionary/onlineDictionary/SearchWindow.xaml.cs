@@ -29,6 +29,7 @@ namespace onlineDictionary
 
         private void search_TextChanged(object sender, TextChangedEventArgs e)
         {
+
             wordListBox.Items.Clear();
             _words.GetWords();
             foreach (var word in _words.ReturnWords())
@@ -62,6 +63,8 @@ namespace onlineDictionary
         {
             category = categoryBox.Text;
         }
+
+
 
         private void search_KeyDown(object sender, KeyEventArgs e)
         {
