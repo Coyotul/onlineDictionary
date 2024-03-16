@@ -19,8 +19,8 @@ namespace onlineDictionary
     /// </summary>
     public partial class SearchWindow : Window
     {
-        String category = null;
-        Words _words = new Words();
+        private String category = null;
+        private Words _words = new Words();
         public SearchWindow()
         {
             InitializeComponent();
@@ -42,6 +42,11 @@ namespace onlineDictionary
                 if (word.Word.StartsWith(search.Text))
                 {
                     if (category == null)
+                    {
+                        wordListBox.Items.Add(newItem);
+                        continue;
+                    }
+                    if (category.Length == 0)
                         wordListBox.Items.Add(newItem);
                     else if (category == word.Category)
                         wordListBox.Items.Add(newItem);

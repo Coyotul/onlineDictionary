@@ -17,8 +17,8 @@ namespace onlineDictionary
 {
     public partial class AdministratorWindow : Window
     {
-        Administrator _admin = new Administrator();
-        Words _words = new Words();
+        private Administrator _admin = new Administrator();
+        private Words _words = new Words();
 
         public AdministratorWindow()
         {
@@ -30,7 +30,6 @@ namespace onlineDictionary
             password.Visibility = Visibility.Visible;
             incorectCredentials.Visibility = Visibility.Collapsed;
             addWord.Visibility = Visibility.Collapsed;
-            deleteWord.Visibility = Visibility.Collapsed;
             scrollViewer.Visibility = Visibility.Collapsed;
             updateList.Visibility = Visibility.Collapsed;
         }
@@ -57,7 +56,6 @@ namespace onlineDictionary
                     passwordText.Visibility = Visibility.Collapsed;
                     password.Visibility = Visibility.Collapsed;
                     addWord.Visibility = Visibility.Visible;
-                    deleteWord.Visibility = Visibility.Visible;
                     scrollViewer.Visibility = Visibility.Visible;
                     updateList.Visibility = Visibility.Visible;
                     wordListBox.Visibility = Visibility.Visible;

@@ -7,6 +7,28 @@
         mc:Ignorable="d"
         Title="EntertainmentWindowxaml" Height="450" Width="800">
     <Grid Background="#FFC99292">
-        
+        <TextBox x:Name="wordText" Text=""  FontSize="30" Margin="125,359,130,-1" FontWeight="Bold" Background="#FFFFFFFF" BorderBrush="#00ABADB3" TextChanged="wordText_TextChanged" KeyDown="wordText_KeyDown"/>
+        <TextBlock x:Name="guessText" Text="Guess:"  FontSize="30" Margin="15,79,660,10" FontWeight="Bold" Background="#002BD6BC"/>
+        <Image x:Name="imageControl" Source="no_image.png" Margin="163,99,235,100" />
+        <TextBlock x:Name="description" Text="Description" TextWrapping="Wrap"  FontSize="30" Margin="150,78,234,90" FontWeight="Bold" Background="#05FFFFFF" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.938"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2.954"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="RoundText" Text="Round:"  FontSize="30" Margin="565,-1,0,310" FontWeight="Bold" Background="#FF34B49D"/>
+        <TextBlock x:Name="Round" Text="1/5"  FontSize="30" Margin="565,48,0,-5" FontWeight="Bold"/>
+        <TextBlock x:Name="gameText" Text="Guessing Game"  FontSize="72" Margin="208,-11,195,275" Background="#002BD6BC" FontFamily="Chiller">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Button x:Name="prevButton" Content="Previous" Click="OnClickPrev" ClickMode="Release" Width="127" HorizontalAlignment="Left" Margin="-2,359,0,0" FontSize="20" Background="#FFB15D5D" FontFamily="Tahoma" FontWeight="Bold"/>
+        <Button x:Name="nextButton" Content="Next" Click="OnClickNext" ClickMode="Release" Width="127" HorizontalAlignment="Left" Margin="670,359,0,0" FontSize="20" Background="#FFB15D5D" FontFamily="Tahoma" FontWeight="Bold"/>
+
     </Grid>
 </Window>

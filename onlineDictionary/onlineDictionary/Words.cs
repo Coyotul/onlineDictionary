@@ -14,7 +14,7 @@ namespace onlineDictionary
     {
         private List<wordStruct> _words = new List<wordStruct>();
         private List<String> _category = new List<String>();
-
+        private Random rnd = new Random();
         public struct wordStruct
         {
             public string Word {  get; set; }
@@ -104,6 +104,12 @@ namespace onlineDictionary
                 { return word; }
             }
             return new wordStruct();
+        }
+
+        public wordStruct GetRandomWord()
+        {
+            int num = rnd.Next(0,_words.Count);
+            return _words[num];
         }
     }
 }
