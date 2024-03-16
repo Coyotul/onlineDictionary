@@ -13,12 +13,14 @@ namespace onlineDictionary
     internal class Words
     {
         private List<wordStruct> _words = new List<wordStruct>();
+        private List<String> _category = new List<String>();
 
         public struct wordStruct
         {
             public string Word {  get; set; }
             public string Description { get; set; }
             public string ImageSource { get; set; }
+            public string Category {  get; set; }
         }
 
 
@@ -57,21 +59,23 @@ namespace onlineDictionary
             }
         }
 
-        public void AddWord(string word, string description)
+        public void AddWord(string word, string description,string Category)
         {
             wordStruct w = new wordStruct();
             w.Word = word;
             w.Description = description;
             w.ImageSource = "no_image.png";
+            w.Category = Category;
             _words.Add(w);
         }
 
-        public void AddWord(string word, string description, string imageSource)
+        public void AddWord(string word, string description, string imageSource, string Category)
         {
             wordStruct w = new wordStruct();
             w.Word = word;
             w.Description = description;
             w.ImageSource = imageSource;
+            w.Category = Category;
             _words.Add(w);
         }
 

@@ -88,7 +88,7 @@ namespace onlineDictionary
 
         public void UpdateList()
         {
-            //wordListBox.Items.Clear();
+            wordListBox.Items.Clear();
             _words.GetWords();
             foreach (var word in _words.ReturnWords())
             {
@@ -101,11 +101,9 @@ namespace onlineDictionary
 
         private void WordItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            // Obține cuvântul selectat
             var listBoxItem = (ListBoxItem)sender;
             string selectedWord = (string)listBoxItem.Content;
 
-            // Aici poți executa acțiunea corespunzătoare când utilizatorul face dublu clic pe un element
             MessageBox.Show("Ai făcut dublu clic pe cuvântul: " + selectedWord);
         }
 

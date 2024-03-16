@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:onlineDictionary"
         mc:Ignorable="d"
-        Title="AddWord" Height="169" Width="337">
+        Title="AddWord" Height="228" Width="337">
     <Grid>
         <TextBlock x:Name="wordText" Text="Word:"  FontSize="20" Margin="0,7,197,100"/>
         <TextBlock x:Name="descriptionText" Text="Description:"  FontSize="20" Margin="-3,42,200,62"/>
-        <TextBox x:Name="word" Text=""  Margin="131,13,1,96" TextChanged="word_TextChanged"/>
-        <TextBox x:Name="description" Text="" Margin="132,45,0,66" TextChanged="description_TextChanged"/>
-        <TextBlock x:Name="imageSourceText" Text="ImageSource:"  FontSize="20" Margin="1,73,177,31"/>
-        <Button x:Name="choseImage" Content="Choose Image" Click="chooseImage" ClickMode="Release" Width="156" HorizontalAlignment="Left" FontSize="10" FontFamily="Tahoma" FontWeight="Bold" Margin="131,79,0,40"/>
+        <TextBox x:Name="word" Text=""  Margin="135,13,1,148" TextChanged="word_TextChanged"/>
+        <TextBox x:Name="description" Text="" Margin="135,47,-3,124" TextChanged="description_TextChanged"/>
+        <TextBlock x:Name="imageSourceText" Text="ImageSource:"  FontSize="20" Margin="2,118,176,30"/>
+        <Button x:Name="choseImage" Content="Choose Image" Click="chooseImage" ClickMode="Release" Width="156" HorizontalAlignment="Left" FontSize="10" FontFamily="Tahoma" FontWeight="Bold" Margin="156,118,0,58"/>
 
-        <Button x:Name="addWord" Content="Add Word" Click="addWordButton" ClickMode="Release" Width="300" HorizontalAlignment="Center" FontSize="20" FontFamily="Tahoma" FontWeight="Bold" Margin="0,105,0,0">
+        <Button x:Name="addWord" Content="Add Word" Click="addWordButton" ClickMode="Release" Width="300" HorizontalAlignment="Center" FontSize="20" FontFamily="Tahoma" FontWeight="Bold" Margin="0,164,0,0">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -22,6 +22,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <TextBlock x:Name="categoryText" Text="Category:"  FontSize="20" Margin="-1,83,179,61"/>
+        <TextBox x:Name="category" Text="" Margin="137,79,0,97" TextChanged="description_TextChanged"/>
 
     </Grid>
 </Window>

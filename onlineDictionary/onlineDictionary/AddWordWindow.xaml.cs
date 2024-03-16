@@ -38,12 +38,12 @@ namespace onlineDictionary
 
         private void addWordButton(object sender, RoutedEventArgs e)
         {
-            if (word.Text.Length != 0 && description.Text.Length != 0)
+            if (word.Text.Length != 0 && description.Text.Length != 0 && category.Text.Length!=0)
             {
 
                 Words _words = new Words();
                 _words.GetWords();
-                _words.AddWord(word.Text, description.Text, _imageSource);
+                _words.AddWord(word.Text, description.Text, _imageSource, category.Text);
                 _words.SetWords();
                 Close();
             }
